@@ -1,0 +1,1 @@
+# Changelog\n\n## [1.1.0] - 2026-04-12\n### Fixed\n- Input validation to prevent XSS attacks\n- Global error handler for unhandled exceptions\n- Memory leak in connection pool\n\n### Added\n- Email validation utility\n- Phone number validation\n- Input sanitization function
