@@ -1,0 +1,1 @@
+// Input validation utilities\nfunction validateEmail(email) {\n  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;\n  return re.test(email);\n}\n\nfunction validatePhone(phone) {\n  return /^\+?[\d\s-]{10,15}$/.test(phone);\n}\n\nfunction sanitizeInput(str) {\n  return str.replace(/[<>"'&]/g, '');\n}\n\nmodule.exports = { validateEmail, validatePhone, sanitizeInput };
