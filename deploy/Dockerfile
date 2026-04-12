@@ -1,0 +1,1 @@
+FROM node:20-alpine\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci --production\nCOPY . .\nEXPOSE 3000\nHEALTHCHECK CMD curl -f http://localhost:3000/health || exit 1\nCMD ["node", "src/index.js"]
