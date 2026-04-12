@@ -1,0 +1,1 @@
+// Global error handler\nfunction handleError(err, req, res, next) {\n  console.error('Error:', err.message);\n  const status = err.statusCode || 500;\n  res.status(status).json({\n    error: err.message,\n    code: err.code || 'INTERNAL_ERROR',\n    timestamp: new Date().toISOString()\n  });\n}\nmodule.exports = { handleError };
