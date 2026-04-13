@@ -1,1 +1,2 @@
 public class AccountService {\n    public static List<Account> getAccounts() {\n        return [SELECT Id, Name FROM Account LIMIT 100];\n    }\n}
+
