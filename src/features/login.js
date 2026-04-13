@@ -1,0 +1,1 @@
+// Login feature - in development\nexport function login(username, password) {\n  console.log('Authenticating', username);\n  return fetch('/api/auth', {\n    method: 'POST',\n    body: JSON.stringify({ username, password })\n  });\n}\n\nexport function logout() {\n  sessionStorage.clear();\n  window.location.href = '/';\n}

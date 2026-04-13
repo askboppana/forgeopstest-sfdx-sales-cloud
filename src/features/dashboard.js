@@ -1,0 +1,1 @@
+// Ashiwn testing this project Dashboard component\nexport function renderDashboard(data) {\n  const stats = data.map(d => ({\n    label: d.name,\n    value: d.count,\n    trend: d.trend > 0 ? 'up' : 'down'\n  }));\n  return { stats, lastUpdated: new Date() };\n}

@@ -1,0 +1,1 @@
+describe('Login', () => {\n  test('should authenticate valid user', async () => {\n    const result = await login('admin', 'pass123');\n    expect(result.status).toBe(200);\n  });\n  test('should reject invalid credentials', async () => {\n    const result = await login('bad', 'wrong');\n    expect(result.status).toBe(401);\n  });\n});
