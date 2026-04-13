@@ -1,0 +1,1 @@
+// Auth middleware\nfunction authenticate(req, res, next) {\n  const token = req.headers.authorization;\n  if (!token) return res.status(401).json({ error: 'No token' });\n  try {\n    req.user = verifyToken(token);\n    next();\n  } catch (e) {\n    res.status(403).json({ error: 'Invalid token' });\n  }\n}\nmodule.exports = { authenticate };

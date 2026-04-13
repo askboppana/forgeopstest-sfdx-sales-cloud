@@ -1,0 +1,1 @@
+// Database configuration for INT\nmodule.exports = {\n  host: 'int-db-01.internal',\n  port: 5432,\n  database: 'forgeopstest-sfdx-sales-cloud_int',\n  pool: { min: 2, max: 10 },\n  ssl: false\n};
